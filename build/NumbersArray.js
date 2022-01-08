@@ -16,7 +16,6 @@ class NumbersArray {
             }
         };
         let properties = [...newObj][0];
-        console.log(properties);
         for (let i = 0; i < properties.length; i++) {
             console.log(properties[i]);
             final.push(properties[i]);
