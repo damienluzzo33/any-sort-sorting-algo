@@ -1,0 +1,25 @@
+{
+  "name": "any-sort-sorting-algo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damienluzzo33/any-sort-sorting-algo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damienluzzo33/any-sort-sorting-algo/issues"
+  },
+  "homepage": "https://github.com/damienluzzo33/any-sort-sorting-algo#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
