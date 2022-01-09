@@ -9,7 +9,7 @@ class StringCollection {
         return this.data.length;
     }
     compare(left, right) {
-        return (this.data[left].toLowerCase() >= this.data[right].toLowerCase());
+        return (this.data[left].toLowerCase() > this.data[right].toLowerCase());
     }
     swap(left, right) {
         const arrayVersion = this.data.split('');

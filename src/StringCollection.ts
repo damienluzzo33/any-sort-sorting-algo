@@ -6,7 +6,7 @@ export class StringCollection {
     }
 
     compare(left: number, right: number): boolean {
-        return (this.data[left].toLowerCase() >= this.data[right].toLowerCase());
+        return (this.data[left].toLowerCase() > this.data[right].toLowerCase());
     }
 
     swap(left: number, right: number): void {
