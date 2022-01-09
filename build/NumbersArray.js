@@ -17,10 +17,8 @@ class NumbersArray {
         };
         let properties = [...newObj][0];
         for (let i = 0; i < properties.length; i++) {
-            console.log(properties[i]);
             final.push(properties[i]);
         }
-        console.log(final);
         return final;
     }
     compare(first, second) {

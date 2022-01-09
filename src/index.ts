@@ -1,14 +1,15 @@
-import { NumbersArray } from "./NumbersArray";
-import { Sorter } from "./Sorter";
+// import { NumbersArray } from "./NumbersArray";
+// import { Sorter } from "./Sorter";
+import { NumArray } from "./NumArray";
+import { Bubble } from "./Bubble";
 
-const newNumArray = new NumbersArray([11,3,33,9])
+// const newNumArray = new NumbersArray([11,3,33,9])
+// const newSort = new Sorter(newNumArray);
+// const sorted = newSort.mergeSort();
+// console.log(sorted);
 
-const newSort = new Sorter(newNumArray);
-const sorted = newSort.mergeSort();
+const newNumArray = new NumArray([11,3,33,9]);
+const newSort = new Bubble(newNumArray);
+newSort.bubbleSort();
 
-
-console.log(sorted);
-
-
-
-//* The Main Merge Sort Function
+console.log(newNumArray.data)

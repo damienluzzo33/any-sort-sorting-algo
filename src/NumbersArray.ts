@@ -16,10 +16,8 @@ export class NumbersArray {
         
         let properties = [...newObj][0];
         for (let i = 0; i < properties.length; i++) {
-            console.log(properties[i])
             final.push(properties[i])
         }
-        console.log(final)
         return final;
     }
 
@@ -38,7 +36,6 @@ export class NumbersArray {
     slice(arr: NumbersArray, start: number, end: number): NumbersArray {
         let newArr: number[] = this.convert(arr);
         newArr = newArr.slice(start,end); 
-
         return new NumbersArray(newArr);
     }
 

@@ -1,10 +1,9 @@
 import { NumbersArray } from "./NumbersArray";
 
 export class Sorter {
-    //! need to change this so that strings are permissible
+
     constructor(public collection: NumbersArray) {}
     
-    //! need to change this so that strings are permissible
     protected mergeHelper(arg1: NumbersArray, arg2: NumbersArray): NumbersArray {
         let finalResult = this.collection.initializer();
         let newArg1 = this.collection.convert(arg1);
@@ -34,8 +33,9 @@ export class Sorter {
         return newFinal;
     }
 
-    //! need to change this so that strings are permissible
     mergeSort(arr: NumbersArray = this.collection): NumbersArray {
+
+        console.log(arr);
 
         if (arr.length <= 1) {
             return arr;
@@ -44,6 +44,9 @@ export class Sorter {
 
         let leftHalfArr = this.mergeSort(arr.slice(arr, 0, middle));
         let rightHalfArr = this.mergeSort(arr.slice(arr, middle, arr.length + 1));
+
+        console.log(leftHalfArr, rightHalfArr)
+
         return this.mergeHelper(leftHalfArr, rightHalfArr);
     }
 }
