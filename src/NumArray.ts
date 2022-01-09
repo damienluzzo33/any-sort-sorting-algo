@@ -1,5 +1,9 @@
-export class NumArray {
-    constructor(public data: number[]) {}
+import { Bubble } from "./Bubble";
+
+export class NumArray extends Bubble {
+    constructor(public data: number[]) {
+        super();
+    }
 
     get length(): number {
         return this.data.length;
@@ -11,5 +15,9 @@ export class NumArray {
 
     swap(left: number, right: number): void {
         [this.data[left], this.data[right]] = [this.data[right], this.data[left]];
+    }
+
+    runBubbleSort() {
+
     }
 }

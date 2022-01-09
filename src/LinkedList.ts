@@ -1,9 +1,11 @@
+import { Bubble } from "./Bubble";
+
 class Node {
     next: Node | null = null;
     constructor(public data: number) {}
 }
 
-export class LinkedList {
+export class LinkedList extends Bubble {
     head: Node | null = null;
 
     add(data: number): void {
@@ -58,13 +60,17 @@ export class LinkedList {
     print(): Node | void {
         if (!this.head) throw new Error("You can't sort what can't be sorted!");
         return this.head;
-        // if instead we want to return an array of values
-        // let pointer: Node | null = this.head;
-        // let returnArr: number[] = [];
-        // while(pointer) {
-        //     returnArr.push(pointer.data);
-        //     pointer = pointer.next;
-        // }
-        // return returnArr;
     }
 }
+
+
+
+
+// if instead we want to return an array of values
+// let pointer: Node | null = this.head;
+// let returnArr: number[] = [];
+// while(pointer) {
+//     returnArr.push(pointer.data);
+//     pointer = pointer.next;
+// }
+// return returnArr;

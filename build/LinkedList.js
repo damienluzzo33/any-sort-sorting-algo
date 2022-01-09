@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
+const Bubble_1 = require("./Bubble");
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Bubble_1.Bubble {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
@@ -62,14 +64,14 @@ class LinkedList {
         if (!this.head)
             throw new Error("You can't sort what can't be sorted!");
         return this.head;
-        // if instead we want to return an array of values
-        // let pointer: Node | null = this.head;
-        // let returnArr: number[] = [];
-        // while(pointer) {
-        //     returnArr.push(pointer.data);
-        //     pointer = pointer.next;
-        // }
-        // return returnArr;
     }
 }
 exports.LinkedList = LinkedList;
+// if instead we want to return an array of values
+// let pointer: Node | null = this.head;
+// let returnArr: number[] = [];
+// while(pointer) {
+//     returnArr.push(pointer.data);
+//     pointer = pointer.next;
+// }
+// return returnArr;

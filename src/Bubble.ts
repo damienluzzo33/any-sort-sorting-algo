@@ -1,19 +1,15 @@
-interface SortItem {
-    length: number;
-    compare(left: number, right: number): boolean;
-    swap(left: number, right: number): void;
-}
-
-export class Bubble {
-    constructor(public collection: SortItem) {}
+export abstract class Bubble {
+    abstract compare(left: number, right: number): boolean;
+    abstract length: number;
+    abstract swap(left: number, right: number): void;
 
     bubbleSort(): void {
-        const { length } = this.collection;
+        const { length } = this;
 
         for (let i = 0; i < length; i++) {
             for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection.compare(j, j+1)) {
-                    this.collection.swap(j, j+1);
+                if (this.compare(j, j+1)) {
+                    this.swap(j, j+1);
                 }
             }
         }

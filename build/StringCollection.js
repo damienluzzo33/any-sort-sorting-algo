@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StringCollection = void 0;
-class StringCollection {
+const Bubble_1 = require("./Bubble");
+class StringCollection extends Bubble_1.Bubble {
     constructor(data) {
+        super();
         this.data = data;
     }
     get length() {
