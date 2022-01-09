@@ -1,7 +1,5 @@
-// import { NumbersArray } from "./NumbersArray";
-// import { Sorter } from "./Sorter";
+// import { Merge } from "./Merge";
 import { NumArray } from "./NumArray";
-import { Bubble } from "./Bubble";
 import { StringCollection } from "./StringCollection";
 import { LinkedList } from "./LinkedList";
 
